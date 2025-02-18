@@ -1,24 +1,8 @@
   ### Run common DSC configurations for contoso engineering environments to create Dev Drive and install common tools
 $schema: 1.0
-apiVersion: devcenter.microsoft.com/v1.0
-kind: devboxdefinition
-metadata:
-  name: ZAE-DD-D-DevBox-0000-AADefinition
-  description: "Dev Box Definition with winget installation tasks for Advanced Analytics"
-spec:
-  imageReference:
-    type: ComputeGalleryImage
-    galleryResourceId: "/subscriptions/c626434c-e91b-451f-93c8-a71a39f512d6/resourceGroups/inpex-poc/providers/Microsoft.Compute/galleries/inpex_poc_gallery"
-    imageDefinition: "Base-Image"
-    imageVersion: "1.0.0"
-  sku:
-    vmSize: Standard_D4s_v3
-  storageProfile:
-    osDisk:
-      diskSizeGB: 128
-      storageAccountType: Premium_LRS
-  runOnStart:
-    tasks:
+name: ContosoBaseImageDefinition
+image: microsoftwindowsdesktop_windows-ent-cpc_win11-24H2-ent-cpc
+tasks:
       - name: "Get Package List from Blob Storage"
         description: "Retrieve the list of packages from a blob storage"
         script: |
