@@ -3,13 +3,13 @@ $schema: 1.0
 name: ContosoBaseImageDefinition
 image: microsoftwindowsdesktop_windows-ent-cpc_win11-24H2-ent-cpc
 tasks:
-      - name: "Get Package List from Blob Storage"
-        description: "Retrieve the list of packages from a blob storage"
-        script: |
-          curl -o packages.txt "https://inpexpocsa.blob.core.windows.net/packages/"
-      - name: "Install Packages from Blob Storage"
-        description: "Install packages from a blob storage using winget"
-        script: |
-          while IFS= read -r package; do
-            winget install "$package" --silent --accept-package-agreements
-          done < packages.txt
+  - name: "Get Package List from Blob Storage"
+    description: "Retrieve the list of packages from a blob storage"
+    script: |
+      curl -o packages.txt "https://inpexpocsa.blob.core.windows.net/packages/"
+  - name: "Install Packages from Blob Storage"
+    description: "Install packages from a blob storage using winget"
+    script: |
+      while IFS= read -r package; do
+        winget install "$package" --silent --accept-package-agreements
+      done < packages.txt
