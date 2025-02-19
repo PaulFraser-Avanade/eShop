@@ -6,6 +6,25 @@ tasks:
   - name: ~/winget
     parameters: 
       package: Microsoft.VisualStudioCode
+  #SSMS
   - name: ~/winget
     parameters: 
       package: Git.Git
+  #VS Code Extensions
+  #Python Libraries
+  - name: ~/winget
+    parameters: 
+      package: Python.Python.3
+  - name: ~/winget
+    parameters: 
+      package: Microsoft.WSL
+  - name: ~/winget
+    parameters: 
+      package: Continuum.Miniconda3
+  - name: ~/winget
+    parameters: 
+      package: Notepad++.Notepad++
+  - name: ~/winget
+    parameters: 
+      package: Microsoft.AzureDataStudio
+  #PyCharm
