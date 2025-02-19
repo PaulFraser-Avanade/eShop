@@ -3,9 +3,9 @@ $schema: 1.0
 name: ContosoBaseImageDefinition
 image: "inpex_poc_gallery/Golden-Image@1.0.0"
 tasks:
-  - name: winget
+  - name: ~/winget
     parameters: 
       package: Microsoft.VisualStudioCode
-  - name: winget
+  - name: ~/winget
     parameters: 
       package: Git.Git
