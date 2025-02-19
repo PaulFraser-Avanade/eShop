@@ -1,9 +1,8 @@
-### Run common DSC configurations for contoso engineering environments to create Dev Drive and install common tools
+ ### Run common DSC configurations for contoso engineering environments to create Dev Drive and install common tools
 $schema: 1.0
 name: ContosoBaseImageDefinition
-image: microsoftwindowsdesktop_windows-ent-cpc_win11-24H2-ent-cpc
+image: dev_inpex_poc/Base-Image@1.0.0
 tasks:
-  - name: "Create Blank Text File"
-    description: "Create a blank text file on the C drive"
-    script: |
-      New-Item -Path "C:\blankfile.txt" -ItemType "file"
+  - name: ~/winget
+    parameters:
+      downloadUrl: 'https://raw.githubusercontent.com/contoso-co/eShop/refs/heads/main/.configurations/common-config.dsc.yaml'
