@@ -1,8 +1,11 @@
  ### Run common DSC configurations for contoso engineering environments to create Dev Drive and install common tools
 $schema: 1.0
 name: ContosoBaseImageDefinition
-image: inpex_poc_gallery/Base-Image@1.0.0
+image: "inpex_poc_gallery/Golden-Image@1.0.0"
 tasks:
-  - name: ~/winget
-    parameters:
-      downloadUrl: 'https://raw.githubusercontent.com/contoso-co/eShop/refs/heads/main/.configurations/common-config.dsc.yaml'
+  - name: winget
+    parameters: 
+      package: Microsoft.VisualStudioCode
+  - name: winget
+    parameters: 
+      package: Git.Git
