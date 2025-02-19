@@ -2,6 +2,7 @@
 $schema: 1.0
 name: ContosoBaseImageDefinition
 image: Golden-Image@1.0.0
+source: inpex_poc_gallery
 tasks:
   - name: ~/winget
     parameters:
