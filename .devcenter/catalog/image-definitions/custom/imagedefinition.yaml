@@ -2,3 +2,11 @@
 $schema: 1.0
 name: ContosoBaseImageDefinition
 image: microsoftwindowsdesktop_windows-ent-cpc_win11-24H2-ent-cpc
+tasks:
+  - name: ~/winget
+    parameters: 
+      package: Microsoft.VisualStudioCode
+  #SSMS
+  - name: ~/winget
+    parameters: 
+      package: Git.Git
