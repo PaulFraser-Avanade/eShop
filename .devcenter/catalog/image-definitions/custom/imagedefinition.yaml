@@ -6,4 +6,4 @@ tasks:
   - name: winget
     description: Install a package via winget
     parameters:
-      package: git
+      package: Microsoft.VisualStudioCode
